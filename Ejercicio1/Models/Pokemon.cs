@@ -17,9 +17,11 @@ namespace Ejercicio1.Models
         [DisplayName("Imagen")]
         public string? UrlImagen { get; set; }
         [Required(ErrorMessage = "El tipo es requerido.")]
-        public Elemento Tipo { get; set; }
+        public int TipoId { get; set; }
         [Required(ErrorMessage = "La debilidad es requerida.")]
-        public Elemento Debilidad { get; set; }
+        public int DebilidadId { get; set; }
+        public Elemento? Tipo { get; set; }
+        public Elemento? Debilidad { get; set; }
         public bool Activo { get; set; }
     }
 }
