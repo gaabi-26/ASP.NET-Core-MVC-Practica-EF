@@ -22,6 +22,6 @@ namespace Ejercicio1.Models
         public int DebilidadId { get; set; }
         public Elemento? Tipo { get; set; }
         public Elemento? Debilidad { get; set; }
-        public bool Activo { get; set; }
+        public bool Activo { get; set; } = true;
     }
 }
