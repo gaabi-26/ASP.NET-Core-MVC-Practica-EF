@@ -51,10 +51,11 @@
         </dl>
     </div>
     <div class="col-4">
-        <img src="@Model.UrlImagen"
-             alt="Imagen Pokemon"
+        <img src="@(string.IsNullOrWhiteSpace(@Model.UrlImagen)
+            ? "/images/image_not_found.png" : @Model.UrlImagen)"
              class="img-fluid shadow-sm"
-             style="max-width: 250px;" />
+             style="max-width:250px"
+             onerror="this.onerror=null; this.src='/images/image_not_found.png';" />
     </div>
 </div>
 

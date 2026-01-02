@@ -49,10 +49,12 @@
                 @Html.DisplayFor(modelItem => item.Descripcion)
             </td>
             <td>
-                <img src="@item.UrlImagen" 
-                    alt="Imagen Pokemon" 
-                    class="img-fluid" 
-                    style="max-width: 40px;"/>
+                    <img src="@(string.IsNullOrWhiteSpace(item.UrlImagen)
+                                     ? "/images/image_not_found.png"
+                                     : item.UrlImagen)"
+                     class="img-fluid"
+                     style="max-width:40px"
+                     onerror="this.onerror=null; this.src='/images/image_not_found.png';" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Tipo.Descripcion)
