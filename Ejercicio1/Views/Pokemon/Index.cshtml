@@ -9,6 +9,13 @@
 <p>
     <a asp-action="Create" class="btn btn-success">Crear Nuevo</a>
 </p>
+
+<div class="row mb-3">
+    <div class="col-sm-5">
+        <input id="searchBox" class="form-control" type="text" placeholder="Buscar por Nombre..."/>
+    </div>
+</div>
+
 <table class="table">
     <thead>
         <tr>
@@ -74,3 +81,19 @@
 }
     </tbody>
 </table>
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const box = document.getElementById('searchBox');
+            const tbody = document.querySelector('table.table tbody');
+
+            box.addEventListener('input', function () {
+                const term = box.value.trim().toLowerCase();
+                Array.from(tbody.rows).forEach(row => {
+                    const nombre = (row.cells[1]?.textContent || '').trim().toLowerCase();
+                    row.style.display = nombre.includes(term) ? '' : 'none';
+                });
+            });
+        });
+    </script>
+}
