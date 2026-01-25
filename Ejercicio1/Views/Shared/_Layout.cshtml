@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Ejercicio1.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Ejercicio1</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Pokedex</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -21,11 +22,11 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
-                        <li class="nav-item">
+                        @* <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        </li> *@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Pokemon" asp-action="Index">Pokemons</a>
                         </li>
@@ -45,9 +46,43 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2025 - Ejercicio1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            © @DateTime.Now.Year · Portfolio personal Gabriel Martinez
         </div>
     </footer>
+    @* <footer class="border-top mt-5 py-4 bg-light">
+        <div class="container">
+            <div class="row text-center text-md-start align-items-center">
+
+                <div class="col-md-6 mb-2 mb-md-0">
+                    <span class="fw-semibold">Gabriel Martínez</span><br />
+                    <span class="text-muted">Desarrollador Backend · .NET</span>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <a href="mailto:gaabi26092005@gmail.com"
+                       class="text-decoration-none me-3">
+                        <i class="bi bi-envelope"></i> Email
+                    </a>
+
+                    <a href="https://github.com/gaabi-26" target="_blank"
+                       class="text-decoration-none me-3">
+                        <i class="bi bi-github"></i> GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/gaabi26" target="_blank"
+                       class="text-decoration-none">
+                        <i class="bi bi-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="text-center text-muted small mt-3">
+                © @DateTime.Now.Year · Portfolio personal
+            </div>
+        </div>
+    </footer> *@
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
