@@ -1,28 +1,62 @@
-# PokemonsPracticaEF
+# Pokedex – ASP.NET Core MVC + Entity Framework
 
-## Ejercicio 1
-Tomaremos como referencia la idea del proyecto de Pokemons de la unidad 2.
+Pequeña aplicación web desarrollada con **ASP.NET Core MVC** y **Entity Framework Core**, que implementa un CRUD básico para la gestión de Pokémons y sus tipos (elementos).
 
-Crear un nuevo proyecto MVC.
-Agregar las clases Pokemon y Elemento a la carpeta Model.
-Instalar lo necesario para la configuración de Entity Framework.
-Crear el PokemonDbContext.
-Inyectar el contexto desde el Program.cs.
-Crear la initial migration y ejecutar el database update.
-Generar el CRUD para Elementos.
-Generar el CRUD para Pokemons. Ajustar los desplegables y las vistas Listado y Detalle para que muestren Tipo y Debilidad.
-Trabajar en aspectos visuales para mostrar imágenes, mejorar listados. 
-Agregar filtro.
-Nota: si ya existe la DB de pokemons en tu SQL Server, considera cambiar el nombre para la nueva. Por ejemplo: POKEMONS_DB_EF.
+El proyecto fue desarrollado inicialmente como parte de una serie de ejercicios prácticos de un **curso de C# Nivel 4**, y posteriormente fue reutilizado y adaptado como una **demostración simple para portfolio**, con el objetivo de mostrar el manejo completo de una aplicación web en un entorno real.
 
-Esto es importante ya que recordemos que la configuración que estamos trabajando genera la base de datos desde cero.
+---
 
-## Ejercicio 2
-Tomar como punto de partida la idea de Discos.
+## Demostración en línea
 
-Crear un nuevo proyecto MVC.
-Crear las clases correspondientes.
-Implementar EF.
-Crear los CRUDs correspondientes.
-Hacer los ajustes pertinentes para la app.
-Nota: si ya existe la DB de discos, considera cambiar el nombre para la nueva. Por ejemplo: DISCOS_DB_EF
+La aplicación se encuentra desplegada y accesible desde el siguiente enlace:
+
+🔗 **[https://gaabiAppWeb.somee.com](http://gaabiappweb.somee.com/)**
+
+---
+
+## Descripción general
+
+La aplicación permite:
+
+- Crear, listar, editar y eliminar Pokémons  
+- Crear y gestionar los tipos o elementos asociados  
+- Relacionar entidades mediante Entity Framework Core  
+- Visualizar información detallada de cada Pokémon  
+- Aplicar una interfaz clara y responsive utilizando Bootstrap  
+
+---
+
+## Tecnologías utilizadas
+
+- ASP.NET Core MVC  
+- Entity Framework Core  
+- C#  
+- SQL Server  
+- Razor Views  
+- Bootstrap  
+- Git y GitHub  
+
+---
+
+## Contexto del proyecto
+
+Este repositorio nació como parte de ejercicios prácticos orientados a:
+
+- Comprender el patrón MVC  
+- Implementar Entity Framework Core desde cero  
+- Trabajar con migraciones y base de datos  
+- Generar operaciones CRUD completas  
+
+Posteriormente, el proyecto fue reorganizado y mejorado en aspectos visuales y estructurales para ser utilizado como una **demostración técnica simple dentro de un portfolio personal**.
+
+---
+
+## Autor
+
+**Gabriel Martínez**  
+
+- GitHub: https://github.com/gaabi-26  
+- LinkedIn: https://www.linkedin.com/in/gaabi26  
+- Email: gaabi26092005@gmail.com
+
+---
