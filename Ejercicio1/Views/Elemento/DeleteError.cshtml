@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "No se puede eliminar el elemento";
+}
+
+<h1>No se puede eliminar el elemento</h1>
+
+<div class="alert alert-warning">
+    No es posible eliminar este elemento porque está siendo referenciado por uno o varios Pokémons (integridad referencial).
+    Por seguridad, primero actualice o elimine los Pokémons que usan este elemento como debilidad o tipo, y después vuelva a intentarlo.
+</div>
+
+<p>
+    <a asp-action="Index">Volver a la lista de Elementos</a>
+</p>

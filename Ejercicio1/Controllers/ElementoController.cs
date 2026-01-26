@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Ejercicio1.Data;
 using Ejercicio1.Models;
+using Microsoft.Data.SqlClient;
 
 namespace Ejercicio1.Controllers
 {
@@ -146,8 +146,29 @@ namespace Ejercicio1.Controllers
                 _context.Elementos.Remove(elemento);
             }
 
-            await _context.SaveChangesAsync();
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException ex)
+            {
+                // 547 = FOREIGN KEY constraint violation in SQL Server
+                if (ex.InnerException is SqlException sqlEx && sqlEx.Number == 547)
+                {
+                    // Redirige a una vista que explica que no se puede eliminar por integridad referencial
+                    return RedirectToAction(nameof(DeleteError));
+                }
+                // Si no es el caso esperado, relanzar para no ocultar otros errores
+                throw;
+            }
+
             return RedirectToAction(nameof(Index));
+        }
+
+        // Vista que informa por qué no se puede eliminar el elemento
+        public IActionResult DeleteError()
+        {
+            return View();
         }
 
         private bool ElementoExists(int id)
