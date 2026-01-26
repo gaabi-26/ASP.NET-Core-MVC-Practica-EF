@@ -12,7 +12,7 @@
 
 <div class="row mb-3">
     <div class="col-sm-5">
-        <input id="searchBox" class="form-control" type="text" placeholder="Buscar por Nombre..."/>
+        <input id="searchBox" class="form-control" type="text" placeholder="Buscar por Nombre..." autocomplete="off" />
     </div>
 </div>
 
@@ -44,21 +44,22 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Numero)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descripcion)
-            </td>
-            <td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Numero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
                     <img src="@(string.IsNullOrWhiteSpace(item.UrlImagen)
-                                     ? "/images/image_not_found.png"
-                                     : item.UrlImagen)"
+                                                              ? "/images/image_not_found.png"
+                                                              : item.UrlImagen)"
                      class="img-fluid"
                      style="max-width:40px"
                      onerror="this.onerror=null; this.src='/images/image_not_found.png';" />
@@ -78,7 +79,7 @@
                 <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Eliminar</a>
             </td>
         </tr>
-}
+                }
     </tbody>
 </table>
 @section Scripts {
