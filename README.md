@@ -10,7 +10,7 @@ El proyecto fue desarrollado inicialmente como parte de una serie de ejercicios 
 
 La aplicación se encuentra desplegada y accesible desde el siguiente enlace:
 
-🔗 **[https://gaabiAppWeb.somee.com](http://gaabiappweb.somee.com/)**
+🔗 **[https://PortfolioGM.somee.com](http://PortfolioGM.somee.com/)**
 
 ---
 
